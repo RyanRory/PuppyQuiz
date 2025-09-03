@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9438D5082E682D7D008C7FFE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9438D5072E682D7D008C7FFE /* Kingfisher */; };
+		9438D50B2E682D8B008C7FFE /* LucideIcons in Frameworks */ = {isa = PBXBuildFile; productRef = 9438D50A2E682D8B008C7FFE /* LucideIcons */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9438D4A22E67F503008C7FFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9438D48A2E67F501008C7FFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9438D4912E67F501008C7FFE;
+			remoteInfo = PuppyQuiz;
+		};
+		9438D4AC2E67F503008C7FFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9438D48A2E67F501008C7FFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9438D4912E67F501008C7FFE;
+			remoteInfo = PuppyQuiz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9438D4922E67F501008C7FFE /* PuppyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuppyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9438D4A12E67F503008C7FFE /* PuppyQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuppyQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9438D4AB2E67F503008C7FFE /* PuppyQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuppyQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9438D4942E67F501008C7FFE /* PuppyQuiz */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PuppyQuiz;
+			sourceTree = "<group>";
+		};
+		9438D4A42E67F503008C7FFE /* PuppyQuizTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PuppyQuizTests;
+			sourceTree = "<group>";
+		};
+		9438D4AE2E67F503008C7FFE /* PuppyQuizUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PuppyQuizUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9438D48F2E67F501008C7FFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9438D5082E682D7D008C7FFE /* Kingfisher in Frameworks */,
+				9438D50B2E682D8B008C7FFE /* LucideIcons in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9438D49E2E67F503008C7FFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9438D4A82E67F503008C7FFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9438D4892E67F501008C7FFE = {
+			isa = PBXGroup;
+			children = (
+				9438D4942E67F501008C7FFE /* PuppyQuiz */,
+				9438D4A42E67F503008C7FFE /* PuppyQuizTests */,
+				9438D4AE2E67F503008C7FFE /* PuppyQuizUITests */,
+				9438D4932E67F501008C7FFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9438D4932E67F501008C7FFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9438D4922E67F501008C7FFE /* PuppyQuiz.app */,
+				9438D4A12E67F503008C7FFE /* PuppyQuizTests.xctest */,
+				9438D4AB2E67F503008C7FFE /* PuppyQuizUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9438D4912E67F501008C7FFE /* PuppyQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9438D4B52E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuiz" */;
+			buildPhases = (
+				9438D48E2E67F501008C7FFE /* Sources */,
+				9438D48F2E67F501008C7FFE /* Frameworks */,
+				9438D4902E67F501008C7FFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9438D4942E67F501008C7FFE /* PuppyQuiz */,
+			);
+			name = PuppyQuiz;
+			packageProductDependencies = (
+				9438D5072E682D7D008C7FFE /* Kingfisher */,
+				9438D50A2E682D8B008C7FFE /* LucideIcons */,
+			);
+			productName = PuppyQuiz;
+			productReference = 9438D4922E67F501008C7FFE /* PuppyQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9438D4A02E67F503008C7FFE /* PuppyQuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9438D4B82E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuizTests" */;
+			buildPhases = (
+				9438D49D2E67F503008C7FFE /* Sources */,
+				9438D49E2E67F503008C7FFE /* Frameworks */,
+				9438D49F2E67F503008C7FFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9438D4A32E67F503008C7FFE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9438D4A42E67F503008C7FFE /* PuppyQuizTests */,
+			);
+			name = PuppyQuizTests;
+			packageProductDependencies = (
+			);
+			productName = PuppyQuizTests;
+			productReference = 9438D4A12E67F503008C7FFE /* PuppyQuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9438D4AA2E67F503008C7FFE /* PuppyQuizUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9438D4BB2E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuizUITests" */;
+			buildPhases = (
+				9438D4A72E67F503008C7FFE /* Sources */,
+				9438D4A82E67F503008C7FFE /* Frameworks */,
+				9438D4A92E67F503008C7FFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9438D4AD2E67F503008C7FFE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9438D4AE2E67F503008C7FFE /* PuppyQuizUITests */,
+			);
+			name = PuppyQuizUITests;
+			packageProductDependencies = (
+			);
+			productName = PuppyQuizUITests;
+			productReference = 9438D4AB2E67F503008C7FFE /* PuppyQuizUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9438D48A2E67F501008C7FFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					9438D4912E67F501008C7FFE = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					9438D4A02E67F503008C7FFE = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9438D4912E67F501008C7FFE;
+					};
+					9438D4AA2E67F503008C7FFE = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9438D4912E67F501008C7FFE;
+					};
+				};
+			};
+			buildConfigurationList = 9438D48D2E67F501008C7FFE /* Build configuration list for PBXProject "PuppyQuiz" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9438D4892E67F501008C7FFE;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9438D5062E682D7D008C7FFE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9438D5092E682D8B008C7FFE /* XCRemoteSwiftPackageReference "lucide-icons-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9438D4932E67F501008C7FFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9438D4912E67F501008C7FFE /* PuppyQuiz */,
+				9438D4A02E67F503008C7FFE /* PuppyQuizTests */,
+				9438D4AA2E67F503008C7FFE /* PuppyQuizUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9438D4902E67F501008C7FFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9438D49F2E67F503008C7FFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9438D4A92E67F503008C7FFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9438D48E2E67F501008C7FFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9438D49D2E67F503008C7FFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9438D4A72E67F503008C7FFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9438D4A32E67F503008C7FFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9438D4912E67F501008C7FFE /* PuppyQuiz */;
+			targetProxy = 9438D4A22E67F503008C7FFE /* PBXContainerItemProxy */;
+		};
+		9438D4AD2E67F503008C7FFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9438D4912E67F501008C7FFE /* PuppyQuiz */;
+			targetProxy = 9438D4AC2E67F503008C7FFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9438D4B32E67F503008C7FFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9438D4B42E67F503008C7FFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9438D4B62E67F503008C7FFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Puppy Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9438D4B72E67F503008C7FFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Puppy Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9438D4B92E67F503008C7FFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuppyQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PuppyQuiz";
+			};
+			name = Debug;
+		};
+		9438D4BA2E67F503008C7FFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuppyQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PuppyQuiz";
+			};
+			name = Release;
+		};
+		9438D4BC2E67F503008C7FFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PuppyQuiz;
+			};
+			name = Debug;
+		};
+		9438D4BD2E67F503008C7FFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7BL4KUB7M4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PuppyQuiz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9438D48D2E67F501008C7FFE /* Build configuration list for PBXProject "PuppyQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9438D4B32E67F503008C7FFE /* Debug */,
+				9438D4B42E67F503008C7FFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9438D4B52E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9438D4B62E67F503008C7FFE /* Debug */,
+				9438D4B72E67F503008C7FFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9438D4B82E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9438D4B92E67F503008C7FFE /* Debug */,
+				9438D4BA2E67F503008C7FFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9438D4BB2E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuizUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9438D4BC2E67F503008C7FFE /* Debug */,
+				9438D4BD2E67F503008C7FFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9438D5062E682D7D008C7FFE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+		9438D5092E682D8B008C7FFE /* XCRemoteSwiftPackageReference "lucide-icons-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JakubMazur/lucide-icons-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.542.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9438D5072E682D7D008C7FFE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9438D5062E682D7D008C7FFE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		9438D50A2E682D8B008C7FFE /* LucideIcons */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9438D5092E682D8B008C7FFE /* XCRemoteSwiftPackageReference "lucide-icons-swift" */;
+			productName = LucideIcons;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9438D48A2E67F501008C7FFE /* Project object */;
+}
