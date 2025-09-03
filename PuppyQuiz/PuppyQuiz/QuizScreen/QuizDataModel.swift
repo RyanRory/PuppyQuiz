@@ -40,12 +40,9 @@ struct QuizItem {
         self.imageURLString = randomItem.message
         self.breed = randomItem.extractBreed()
         if let breed = self.breed {
-            self.options = [
-                Option(option: breed, answer: breed),
-                Option(option: breed, answer: breed),
-                Option(option: breed, answer: breed),
-                Option(option: breed, answer: breed)
-            ]
+            self.options = (BreedList.cache.shuffled().prefix(3) + [breed]).shuffled().map {
+                Option(option: $0, answer: breed)
+            }
         } else {
             self.options = []
         }

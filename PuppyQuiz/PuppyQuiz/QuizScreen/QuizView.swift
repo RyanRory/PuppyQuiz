@@ -8,67 +8,139 @@
 import SwiftUI
 import Kingfisher
 import LucideIcons
+import SwiftfulLoadingIndicators
 
 struct QuizView: View {
     @StateObject var viewModel: QuizViewModel
     @State private var animateOptions = false
+    
+    init(_ viewModel: QuizViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
     var body: some View {
         ZStack {
+            LinearGradient(
+                colors: [Color.accent.opacity(0.12), Color.darkYellow.opacity(0.12)],
+                startPoint: .topLeading, endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+            
             if
                 let quizItem: QuizItem = viewModel.currentQuizItem,
                 quizItem.options.count > 1
             {
-                VStack(spacing: 16) {
-                    ZStack {
-                        KFImage(URL(string: quizItem.imageURLString))
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedRectangle(cornerRadius: 16))
-                            .shadow(radius: 6)
-                            .padding()
-                            .id(quizItem.imageURLString)
-                            .transition(
-                                .asymmetric(
-                                    insertion: .move(edge: .trailing).combined(with: .opacity),
-                                    removal: .move(edge: .leading).combined(with: .opacity)
+                GeometryReader { geo in
+                    VStack(spacing: 16) {
+                        ZStack {
+                            KFImage(URL(string: quizItem.imageURLString))
+                                .placeholder {
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .fill(Color.accent.opacity(0.5))
+                                            .frame(
+                                                width: geo.size.width - 2 * 16,
+                                                height: geo.size.height / 2
+                                            )
+                                        
+                                        LoadingIndicator(
+                                            animation: .bar,
+                                            color: .accent,
+                                            size: .large
+                                        )
+                                    }
+                                }
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .shadow(radius: 6)
+                                .padding()
+                                .id(quizItem.imageURLString)
+                                .transition(
+                                    .asymmetric(
+                                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                                        removal: .move(edge: .leading).combined(with: .opacity)
+                                    )
                                 )
-                            )
-                    }
-                    .frame(height: UIScreen.main.bounds.height / 2)
-                    .animation(
-                        .spring(response: 0.45, dampingFraction: 0.85, blendDuration: 0.2),
-                        value: quizItem.imageURLString
-                    )
-                    
-                    ForEach(Array(quizItem.options.enumerated()), id: \.element.id) { idx, option in
-                        OptionView(option: option.option, answer: option.answer) {
-                            viewModel.loadNextQuizItem()
                         }
-                        .scaleEffect(animateOptions ? 1.0 : 0.9)
+                        .frame(height: geo.size.height / 2)
                         .animation(
-                            .interpolatingSpring(stiffness: 200, damping: 15).delay(Double(idx) * 0.05),
-                            value: animateOptions
+                            .spring(response: 0.45, dampingFraction: 0.85, blendDuration: 0.2),
+                            value: quizItem.imageURLString
                         )
+                        
+                        ForEach(Array(quizItem.options.enumerated()), id: \.element.id) { idx, option in
+                            OptionView(option: option.option, answer: option.answer) {
+                                Task { await viewModel.loadNextQuizItem() }
+                            }
+                            .scaleEffect(animateOptions ? 1.0 : 0.9)
+                            .animation(
+                                .interpolatingSpring(stiffness: 200, damping: 15).delay(Double(idx) * 0.05),
+                                value: animateOptions
+                            )
+                        }
                     }
-                }
-                .frame(
-                    maxHeight: .infinity,
-                    alignment: .top
-                )
-                .onChange(of: quizItem.imageURLString) {
-                    animateOptions = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                        animateOptions = true
+                    .padding(.top)
+                    .frame(
+                        maxHeight: .infinity,
+                        alignment: .top
+                    )
+                    .onChange(of: quizItem.imageURLString) {
+                        animateOptions = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                            animateOptions = true
+                        }
+                        
                     }
-                    
+                    .onAppear { animateOptions = true }
                 }
-                .onAppear { animateOptions = true }
-            }
-            else {
                 
             }
+            else {
+                VStack(spacing: 0) {
+                    Image("Icon")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+
+                    LoadingIndicator(
+                        animation: .bar,
+                        color: .accent,
+                        size: .large
+                    )
+                }
+            }
         }
+    }
+}
+
+// MARK: - ErrorCard
+
+private struct ErrorCard: View {
+    let size: CGSize
+    var retry: () -> Void
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.red.opacity(0.08))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.red.opacity(0.25), lineWidth: 1)
+                )
+                .frame(width: size.width, height: size.height)
+            
+            VStack(spacing: 8) {
+                Image(systemName: "wifi.exclamationmark")
+                    .font(.system(size: 28, weight: .semibold))
+                    .foregroundStyle(.red.opacity(0.9))
+                Text("Couldn’t load image")
+                    .font(.headline)
+                Button("Retry", action: retry)
+                    .buttonStyle(.borderedProminent)
+            }
+            .padding()
+        }
+        .padding(.horizontal)
     }
 }
 
@@ -127,7 +199,7 @@ struct OptionView: View {
     private func selected() {
         if option == answer {
             status = OptionView.Status.right
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                 onCorrectAnswerSelected()
             }
         } else {
@@ -140,7 +212,7 @@ struct OptionView: View {
 
 #Preview {
     QuizView(
-        viewModel: QuizViewModel(
+        QuizViewModel(
             [
                 QuizItem(
                     from: RandomItem(

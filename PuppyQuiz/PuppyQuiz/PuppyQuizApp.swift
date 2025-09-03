@@ -9,9 +9,28 @@ import SwiftUI
 
 @main
 struct PuppyQuizApp: App {
+    enum AppRoute {
+        case launch
+        case quiz(initialItems: [QuizItem])
+    }
+    
+    @State private var route: AppRoute = .launch
+    
     var body: some Scene {
         WindowGroup {
-            QuizView(viewModel: QuizViewModel([]))
+            Group {
+                switch route {
+                    case .launch:
+                        LaunchScreen { initialItems in
+                            withAnimation(.easeInOut(duration: 0.35)) {
+                                route = .quiz(initialItems: initialItems)
+                            }
+                        }
+
+                    case .quiz(let items):
+                        QuizView(QuizViewModel(items))
+                    }
+            }
         }
     }
 }

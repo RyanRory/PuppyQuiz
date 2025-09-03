@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9438D5082E682D7D008C7FFE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9438D5072E682D7D008C7FFE /* Kingfisher */; };
 		9438D50B2E682D8B008C7FFE /* LucideIcons in Frameworks */ = {isa = PBXBuildFile; productRef = 9438D50A2E682D8B008C7FFE /* LucideIcons */; };
+		9438D5182E6870F9008C7FFE /* SwiftfulLoadingIndicators in Frameworks */ = {isa = PBXBuildFile; productRef = 9438D5172E6870F9008C7FFE /* SwiftfulLoadingIndicators */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 			files = (
 				9438D5082E682D7D008C7FFE /* Kingfisher in Frameworks */,
 				9438D50B2E682D8B008C7FFE /* LucideIcons in Frameworks */,
+				9438D5182E6870F9008C7FFE /* SwiftfulLoadingIndicators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +123,7 @@
 			packageProductDependencies = (
 				9438D5072E682D7D008C7FFE /* Kingfisher */,
 				9438D50A2E682D8B008C7FFE /* LucideIcons */,
+				9438D5172E6870F9008C7FFE /* SwiftfulLoadingIndicators */,
 			);
 			productName = PuppyQuiz;
 			productReference = 9438D4922E67F501008C7FFE /* PuppyQuiz.app */;
@@ -207,6 +210,7 @@
 			packageReferences = (
 				9438D5062E682D7D008C7FFE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				9438D5092E682D8B008C7FFE /* XCRemoteSwiftPackageReference "lucide-icons-swift" */,
+				9438D5162E6870F9008C7FFE /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9438D4932E67F501008C7FFE /* Products */;
@@ -595,6 +599,14 @@
 				minimumVersion = 0.542.0;
 			};
 		};
+		9438D5162E6870F9008C7FFE /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -607,6 +619,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9438D5092E682D8B008C7FFE /* XCRemoteSwiftPackageReference "lucide-icons-swift" */;
 			productName = LucideIcons;
+		};
+		9438D5172E6870F9008C7FFE /* SwiftfulLoadingIndicators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9438D5162E6870F9008C7FFE /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;
+			productName = SwiftfulLoadingIndicators;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
