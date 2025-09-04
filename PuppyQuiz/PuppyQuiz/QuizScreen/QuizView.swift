@@ -100,7 +100,10 @@ struct QuizView: View {
                         }
                         
                     }
-                    .onAppear { animateOptions = true }
+                    .onAppear {
+                        animateOptions = true
+                        SoundManager.shared.preload()
+                    }
                 }
                 
             }
@@ -210,7 +213,9 @@ struct OptionView: View {
         if option == answer {
             status = OptionView.Status.right
             isEnabled = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            SoundManager.shared.playCorrectBark()
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
                 onCorrectAnswerSelected()
             }
         } else {
