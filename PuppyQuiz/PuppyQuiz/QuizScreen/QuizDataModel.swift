@@ -18,9 +18,8 @@ extension RandomItem {
             return nil
         }
         let breed = components[breedsIndex + 1]
-        let cleaned = breed.replacingOccurrences(of: "-", with: " ")
-        
-        return cleaned.prefix(1).uppercased() + cleaned.dropFirst()
+
+        return breed.replacingOccurrences(of: "-", with: " ").capitalized
     }
 }
 
@@ -40,9 +39,9 @@ struct QuizItem {
         self.imageURLString = randomItem.message
         self.breed = randomItem.extractBreed()
         if let breed = self.breed {
-            self.options = (BreedList.cache.shuffled().prefix(3) + [breed]).shuffled().map {
-                Option(option: $0, answer: breed)
-            }
+            self.options = (BreedList.cache.filter { $0 != breed }.shuffled().prefix(3) + [breed])
+                .shuffled()
+                .map { Option(option: $0, answer: breed) }
         } else {
             self.options = []
         }

@@ -23,8 +23,7 @@ extension BreedList {
     static func updateCache(_ breedList: [String: [String]]) {
         cache = breedList.flatMap { key, values in
             values.map {
-                let cleaned: String = "\(key) \($0)"
-                return cleaned.prefix(1).uppercased() + cleaned.dropFirst()
+                "\(key) \($0)".capitalized
             }
         }
     }
