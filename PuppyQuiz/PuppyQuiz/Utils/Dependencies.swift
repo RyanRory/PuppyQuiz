@@ -7,17 +7,13 @@
 
 import Foundation
 
-protocol WarmableCache {
-    func warmCache() async throws
-}
-
 struct BreedsCache: Codable {
     let breeds: [String]
     let fetchedAt: Date
 }
 
-final class BreedListService: WarmableCache {
-    static let service = BreedListService()
+class BreedListService {
+    static var service: BreedListService = BreedListService()
     
     private let ttl: TimeInterval = 14 * 24 * 60 * 60
     private(set) var cache: BreedsCache?
@@ -79,6 +75,12 @@ final class BreedListService: WarmableCache {
     private func loadFromLocalStorage() throws -> BreedsCache {
         let data = try Data(contentsOf: cacheURL)
         return try JSONDecoder().decode(BreedsCache.self, from: data)
+    }
+}
+
+extension BreedListService {
+    func updateCache(_ newCache: BreedsCache) {
+        self.cache = newCache
     }
 }
 

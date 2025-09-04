@@ -8,7 +8,7 @@
 import Foundation
 
 class Network {
-    static let client = Network()
+    static var client: Network = Network()
     
     private let baseURL: String = "https://dog.ceo/api/breeds/"
 

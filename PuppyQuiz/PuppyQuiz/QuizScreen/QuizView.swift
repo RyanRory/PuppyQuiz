@@ -70,7 +70,7 @@ struct QuizView: View {
                             value: quizItem.imageURLString
                         )
                         
-                        ForEach(Array(quizItem.options.enumerated()), id: \.element.id) { idx, option in
+                        ForEach(Array(quizItem.options.enumerated()), id: \.element.id) { index, option in
                             OptionView(
                                 isEnabled: $isOptionsEnabled,
                                 option: option.option,
@@ -81,9 +81,10 @@ struct QuizView: View {
                                 }
                                 isOptionsEnabled = true
                             }
+                            .accessibilityIdentifier("optionButton_\(index)")
                             .scaleEffect(animateOptions ? 1.0 : 0.9)
                             .animation(
-                                .interpolatingSpring(stiffness: 200, damping: 15).delay(Double(idx) * 0.05),
+                                .interpolatingSpring(stiffness: 200, damping: 15).delay(Double(index) * 0.05),
                                 value: animateOptions
                             )
                         }

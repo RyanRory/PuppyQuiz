@@ -20,19 +20,11 @@
 			remoteGlobalIDString = 9438D4912E67F501008C7FFE;
 			remoteInfo = PuppyQuiz;
 		};
-		9438D4AC2E67F503008C7FFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9438D48A2E67F501008C7FFE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9438D4912E67F501008C7FFE;
-			remoteInfo = PuppyQuiz;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9438D4922E67F501008C7FFE /* PuppyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuppyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9438D4A12E67F503008C7FFE /* PuppyQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuppyQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9438D4AB2E67F503008C7FFE /* PuppyQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuppyQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,11 +36,6 @@
 		9438D4A42E67F503008C7FFE /* PuppyQuizTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PuppyQuizTests;
-			sourceTree = "<group>";
-		};
-		9438D4AE2E67F503008C7FFE /* PuppyQuizUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PuppyQuizUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -71,13 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9438D4A82E67F503008C7FFE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,7 +66,6 @@
 			children = (
 				9438D4942E67F501008C7FFE /* PuppyQuiz */,
 				9438D4A42E67F503008C7FFE /* PuppyQuizTests */,
-				9438D4AE2E67F503008C7FFE /* PuppyQuizUITests */,
 				9438D4932E67F501008C7FFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,7 +75,6 @@
 			children = (
 				9438D4922E67F501008C7FFE /* PuppyQuiz.app */,
 				9438D4A12E67F503008C7FFE /* PuppyQuizTests.xctest */,
-				9438D4AB2E67F503008C7FFE /* PuppyQuizUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,29 +130,6 @@
 			productReference = 9438D4A12E67F503008C7FFE /* PuppyQuizTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9438D4AA2E67F503008C7FFE /* PuppyQuizUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9438D4BB2E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuizUITests" */;
-			buildPhases = (
-				9438D4A72E67F503008C7FFE /* Sources */,
-				9438D4A82E67F503008C7FFE /* Frameworks */,
-				9438D4A92E67F503008C7FFE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9438D4AD2E67F503008C7FFE /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				9438D4AE2E67F503008C7FFE /* PuppyQuizUITests */,
-			);
-			name = PuppyQuizUITests;
-			packageProductDependencies = (
-			);
-			productName = PuppyQuizUITests;
-			productReference = 9438D4AB2E67F503008C7FFE /* PuppyQuizUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,10 +144,6 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					9438D4A02E67F503008C7FFE = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 9438D4912E67F501008C7FFE;
-					};
-					9438D4AA2E67F503008C7FFE = {
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 9438D4912E67F501008C7FFE;
 					};
@@ -219,7 +170,6 @@
 			targets = (
 				9438D4912E67F501008C7FFE /* PuppyQuiz */,
 				9438D4A02E67F503008C7FFE /* PuppyQuizTests */,
-				9438D4AA2E67F503008C7FFE /* PuppyQuizUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,13 +183,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9438D49F2E67F503008C7FFE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9438D4A92E67F503008C7FFE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,13 +206,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9438D4A72E67F503008C7FFE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -277,11 +213,6 @@
 			isa = PBXTargetDependency;
 			target = 9438D4912E67F501008C7FFE /* PuppyQuiz */;
 			targetProxy = 9438D4A22E67F503008C7FFE /* PBXContainerItemProxy */;
-		};
-		9438D4AD2E67F503008C7FFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9438D4912E67F501008C7FFE /* PuppyQuiz */;
-			targetProxy = 9438D4AC2E67F503008C7FFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -507,40 +438,6 @@
 			};
 			name = Release;
 		};
-		9438D4BC2E67F503008C7FFE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7BL4KUB7M4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuizUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PuppyQuiz;
-			};
-			name = Debug;
-		};
-		9438D4BD2E67F503008C7FFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7BL4KUB7M4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ryan.PuppyQuizUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PuppyQuiz;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -567,15 +464,6 @@
 			buildConfigurations = (
 				9438D4B92E67F503008C7FFE /* Debug */,
 				9438D4BA2E67F503008C7FFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9438D4BB2E67F503008C7FFE /* Build configuration list for PBXNativeTarget "PuppyQuizUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9438D4BC2E67F503008C7FFE /* Debug */,
-				9438D4BD2E67F503008C7FFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
