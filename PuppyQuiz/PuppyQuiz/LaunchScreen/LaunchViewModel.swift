@@ -15,20 +15,13 @@ class LaunchViewModel: ObservableObject {
     
     func loadInitialData() async {
         do {
-            let breedslist = try await Network.client.fetchData(
-                endpoint: .allBreeds,
-                responseType: BreedList.self
-            )
-            BreedList.updateCache(breedslist.message)
+            let breedslist = try await BreedListService.service.getBreedList()
             
             let quizItems = try await withThrowingTaskGroup(of: QuizItem.self) { group -> [QuizItem] in
                 for _ in 0..<3 {
                     group.addTask {
-                        let randomItem = try await Network.client.fetchData(
-                            endpoint: .randomImage,
-                            responseType: RandomItem.self
-                        )
-                        return QuizItem(from: randomItem)
+                        let randomImage = try await RandomImage.fetchFromNetwork()
+                        return QuizItem(from: randomImage)
                     }
                 }
                 

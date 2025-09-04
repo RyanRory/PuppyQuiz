@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension RandomItem {
+extension RandomImage {
     func extractBreed() -> String? {
         guard let url = URL(string: message) else { return nil }
         let components = url.pathComponents
@@ -35,9 +35,9 @@ struct QuizItem {
     var breed: String?
     var options: [Option]
     
-    init(from randomItem: RandomItem) {
-        self.imageURLString = randomItem.message
-        self.breed = randomItem.extractBreed()
+    init(from randomImage: RandomImage) {
+        self.imageURLString = randomImage.message
+        self.breed = randomImage.extractBreed()
         if let breed = self.breed {
             self.options = (BreedList.cache.filter { $0 != breed }.shuffled().prefix(3) + [breed])
                 .shuffled()

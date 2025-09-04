@@ -23,19 +23,11 @@ class QuizViewModel: ObservableObject {
         
         if quizItemsCache.count < 3 {
             do {
-                let newQuizItem = try await loadRandomQuizItem()
-                quizItemsCache.append(newQuizItem)
+                let randomImage = try await RandomImage.fetchFromNetwork()
+                quizItemsCache.append(QuizItem(from: randomImage))
             } catch {
                 print("Failed to fetch data: \(error)")
             }
         }
-    }
-    
-    func loadRandomQuizItem() async throws -> QuizItem {
-        let randomItem = try await Network.client.fetchData(
-            endpoint: .randomImage,
-            responseType: RandomItem.self
-        )
-        return QuizItem(from: randomItem)
     }
 }
