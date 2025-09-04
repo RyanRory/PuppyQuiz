@@ -38,8 +38,8 @@ struct QuizItem {
     init(from randomImage: RandomImage) {
         self.imageURLString = randomImage.message
         self.breed = randomImage.extractBreed()
-        if let breed = self.breed {
-            self.options = (BreedList.cache.filter { $0 != breed }.shuffled().prefix(3) + [breed])
+        if let breed = self.breed, let breedList = BreedListService.service.cache?.breeds {
+            self.options = (breedList.filter { $0 != breed }.shuffled().prefix(3) + [breed])
                 .shuffled()
                 .map { Option(option: $0, answer: breed) }
         } else {

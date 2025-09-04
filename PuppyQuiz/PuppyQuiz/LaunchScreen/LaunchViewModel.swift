@@ -15,7 +15,7 @@ class LaunchViewModel: ObservableObject {
     
     func loadInitialData() async {
         do {
-            let breedslist = try await BreedListService.service.getBreedList()
+            try await BreedListService.service.warmCache()
             
             let quizItems = try await withThrowingTaskGroup(of: QuizItem.self) { group -> [QuizItem] in
                 for _ in 0..<3 {

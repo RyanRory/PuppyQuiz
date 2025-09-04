@@ -13,6 +13,7 @@ import SwiftfulLoadingIndicators
 struct QuizView: View {
     @StateObject var viewModel: QuizViewModel
     @State private var animateOptions = false
+    @State private var isOptionsEnabled = true
     
     init(_ viewModel: QuizViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -70,8 +71,15 @@ struct QuizView: View {
                         )
                         
                         ForEach(Array(quizItem.options.enumerated()), id: \.element.id) { idx, option in
-                            OptionView(option: option.option, answer: option.answer) {
-                                Task { await viewModel.loadNextQuizItem() }
+                            OptionView(
+                                isEnabled: $isOptionsEnabled,
+                                option: option.option,
+                                answer: option.answer
+                            ) {
+                                Task {
+                                    await viewModel.loadNextQuizItem()
+                                }
+                                isOptionsEnabled = true
                             }
                             .scaleEffect(animateOptions ? 1.0 : 0.9)
                             .animation(
@@ -165,6 +173,7 @@ struct OptionView: View {
     }
     
     @State var status: Status = .notSelected
+    @Binding var isEnabled: Bool
     let option: String
     let answer: String
     let onCorrectAnswerSelected: () -> Void
@@ -194,11 +203,13 @@ struct OptionView: View {
             )
             .padding(.horizontal)
         }
+        .disabled(!isEnabled)
     }
     
     private func selected() {
         if option == answer {
             status = OptionView.Status.right
+            isEnabled = false
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                 onCorrectAnswerSelected()
             }
@@ -215,13 +226,13 @@ struct OptionView: View {
         QuizViewModel(
             [
                 QuizItem(
-                    from: RandomItem(
+                    from: RandomImage(
                         message: "https://images.dog.ceo/breeds/hound-plott/hhh-23456.jpg",
                         status: "success"
                     )
                 ),
                 QuizItem(
-                    from: RandomItem(
+                    from: RandomImage(
                         message: "https://images.dog.ceo/breeds/malinois/n02105162_4120.jpg",
                         status: "success"
                     )

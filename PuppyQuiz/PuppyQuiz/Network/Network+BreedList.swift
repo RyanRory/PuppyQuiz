@@ -32,7 +32,7 @@ final class BreedListService {
     static let service = BreedListService()
     
     private let ttl: TimeInterval = 14 * 24 * 60 * 60
-    private var cache: BreedsCache?
+    private(set) var cache: BreedsCache?
     private var cacheURL: URL {
         let base = try! FileManager.default.url(
             for: .applicationSupportDirectory,
@@ -73,6 +73,10 @@ final class BreedListService {
         } catch {
             throw error
         }
+    }
+    
+    func warmCache() async throws {
+        _ = try await getBreedList()
     }
     
     private func isStale(_ date: Date) -> Bool {
