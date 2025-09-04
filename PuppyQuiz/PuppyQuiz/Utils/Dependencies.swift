@@ -1,5 +1,5 @@
 //
-//  Network+BreedList.swift
+//  Depandencies.swift
 //  PuppyQuiz
 //
 //  Created by Ryan ZHAO on 4/9/2025.
@@ -7,28 +7,16 @@
 
 import Foundation
 
-struct BreedList: Response {
-    let message: [String: [String]]
-    let status: String
-    
-    static func fetchFromNetwork() async throws -> BreedList {
-        let breedslist = try await Network.client.fetchData(
-            endpoint: .allBreeds,
-            responseType: BreedList.self
-        )
-        
-        return breedslist
-    }
+protocol WarmableCache {
+    func warmCache() async throws
 }
-
-// MARK: - Data persistence & Cache
 
 struct BreedsCache: Codable {
     let breeds: [String]
     let fetchedAt: Date
 }
 
-final class BreedListService {
+final class BreedListService: WarmableCache {
     static let service = BreedListService()
     
     private let ttl: TimeInterval = 14 * 24 * 60 * 60
@@ -93,3 +81,4 @@ final class BreedListService {
         return try JSONDecoder().decode(BreedsCache.self, from: data)
     }
 }
+

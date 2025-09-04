@@ -45,9 +45,3 @@ extension Network {
         }
     }
 }
-
-// MARK: - Response
-
-protocol Response: Codable {
-    static func fetchFromNetwork() async throws -> Self
-}
