@@ -18,3 +18,4 @@ You’re presented with random puppy images and multiple-choice answers — pick
 - [ ] UI automation test
 - [ ] SwiftData integration for quiz data persistence
 - [ ] Review for previous quiz
+- [ ] Better error handling and error state display
